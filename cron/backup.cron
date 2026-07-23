@@ -1,0 +1,45 @@
+############################################################
+# Smart Linux Server Manager
+# File        : backup.cron
+# Description : Sample Cron Schedule for Automated Backups
+# Author      : Mahendra Varma Datla
+############################################################
+
+# ----------------------------------------------------------
+# CRON FORMAT
+#
+# ┌───────────── Minute (0 - 59)
+# │ ┌─────────── Hour (0 - 23)
+# │ │ ┌───────── Day of Month (1 - 31)
+# │ │ │ ┌─────── Month (1 - 12)
+# │ │ │ │ ┌───── Day of Week (0 - 7)
+# │ │ │ │ │      (0 or 7 = Sunday)
+# │ │ │ │ │
+# * * * * * command
+# ----------------------------------------------------------
+
+# ==========================================================
+# SAMPLE CRON JOB
+# ==========================================================
+#
+# Replace:
+# /path/to/Smart-Linux-Server-Manager
+#
+# with the absolute path where the project is installed.
+#
+# Example:
+#
+# 0 2 * * * bash /home/username/Smart-Linux-Server-Manager/scripts/backup_manager/create_backup.sh
+#
+# This runs every day at 2:00 AM.
+#
+# ==========================================================
+
+# Daily Backup (2:00 AM)
+# 0 2 * * * bash /path/to/Smart-Linux-Server-Manager/scripts/backup_manager/create_backup.sh
+
+# Weekly Backup (Sunday 3:00 AM)
+# 0 3 * * 0 bash /path/to/Smart-Linux-Server-Manager/scripts/backup_manager/create_backup.sh
+
+# Monthly Backup (1st Day 4:00 AM)
+# 0 4 1 * * bash /path/to/Smart-Linux-Server-Manager/scripts/backup_manager/create_backup.sh
